@@ -2,3 +2,4 @@
 credentials.json
 *.pyc
 output_tts.mp3
+.env
