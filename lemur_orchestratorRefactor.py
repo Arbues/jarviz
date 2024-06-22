@@ -8,13 +8,14 @@ from pydub.playback import play
 def play_audio(file_path):
     """ Plays an MP3 file using pydub. """
     print("Playing audio...")
+    # audioSegment = AudioSegment()
     audio = AudioSegment.from_file(file_path)
     play(audio)
     os.remove(file_path)  # Clean up the audio fileqq
 
 def main():
     try:
-        # Step 1: Record and transcribe audio
+        # Step 1: Record and transcribe audioqq
         print("Please speak into the microphone...")
         audio = record_audio()
         audio_file_path = save_recording(audio)
@@ -30,7 +31,7 @@ def main():
         # Step 3: Convert the response to speech
         speech_file_path = text_to_speech(response_text)
         print(f"Speech file created at: {speech_file_path}")
-
+        print("play",speech_file_path)
         # Step 4: Play the response audio
         play_audio(speech_file_path)
 
