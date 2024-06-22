@@ -4,7 +4,7 @@ from lemur_core_stt import record_audio, save_recording, transcribe_audio
 from lemur_core_llm import handle_query
 from pydub import AudioSegment
 from pydub.playback import play
-l
+
 def play_audio(file_path):
     """ Plays an MP3 file using pydub. """
     print("Playing audio...")
